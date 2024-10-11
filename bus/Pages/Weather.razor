@@ -1,0 +1,87 @@
+﻿@page "/weather"
+@inject HttpClient Http
+
+<PageTitle>Bus Reservation</PageTitle>
+
+
+<h3 style="text-align: center; font-family: Arial, sans-serif; color: #2c3e50;">Bus Reservation System</h3>
+
+<div style="margin: 0 auto; max-width: 600px; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+    <form @onsubmit="HandleSubmit">
+        <div style="margin-bottom: 10px;">
+            <label for="name" style="display: block; font-weight: bold;">Name:</label>
+            <input type="text" id="name" @bind="name" placeholder="Enter your name" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;" />
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <label for="city" style="display: block; font-weight: bold;">Destination City:</label>
+            <select id="city" @bind="selectedCity" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                @foreach (var city in cities)
+                {
+                    <option value="@city">@city</option>
+                }
+            </select>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <label for="bus" style="display: block; font-weight: bold;">Bus:</label>
+            <select id="bus" @bind="selectedBus" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                @foreach (var bus in GetBusesForCity(selectedCity))
+                {
+                    <option value="@bus">@bus</option>
+                }
+            </select>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <label for="seat" style="display: block; font-weight: bold;">Seat Number:</label>
+            <input type="number" id="seat" @bind="seatNumber" min="1" placeholder="Enter seat number" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;" />
+        </div>
+
+        <button type="submit" style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Book Seat</button>
+    </form>
+</div>
+
+@if (showBooking)
+{
+    <div style="margin: 20px auto; max-width: 600px; padding: 20px; border: 1px solid #28a745; border-radius: 8px; background-color: #e9f7ef;">
+        <h4 style="color: #28a745;">Booking Confirmed!</h4>
+        <p><strong>Name:</strong> @name</p>
+        <p><strong>Destination:</strong> @selectedCity</p>
+        <p><strong>Bus:</strong> @selectedBus</p>
+        <p><strong>Seat Number:</strong> @seatNumber</p>
+    </div>
+}
+
+@code {
+    private string name;
+    private string selectedCity;
+    private string selectedBus;
+    private int seatNumber;
+    private bool showBooking = false;
+
+    private List<string> cities = new List<string> { "Chengalpattu", "Dharmapuri", "Erode", "Karur", "Nagapattinam", "Salem" };
+    private Dictionary<string, List<string>> cityBusMapping = new Dictionary<string, List<string>>
+    {
+        { "Chengalpattu", new List<string> { "6 AM", "5 PM" } },
+        { "Dharmapuri", new List<string> { "6 AM", "5 PM" } },
+        { "Erode", new List<string> { "6 AM", "5 PM" } },
+        { "Karur", new List<string> { "6 AM", "5 PM" } },
+        { "Nagapattinam", new List<string> { "6 AM", "5 PM" } },
+        { "Salem", new List<string> { "6 AM", "5 PM" } }
+    };
+
+    private IEnumerable<string> GetBusesForCity(string city)
+    {
+        if (!string.IsNullOrEmpty(city) && cityBusMapping.ContainsKey(city))
+        {
+            return cityBusMapping[city];
+        }
+        return new List<string>();
+    }
+
+    private void HandleSubmit()
+    {
+        showBooking = true;
+    }
+}

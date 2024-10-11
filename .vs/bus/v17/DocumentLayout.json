@@ -1,0 +1,72 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\appuk\\source\\repos\\bus\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC450EF-FE4B-4BF0-B6E5-64285104FFFE}|bus\\bus.csproj|c:\\users\\appuk\\source\\repos\\bus\\bus\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FC450EF-FE4B-4BF0-B6E5-64285104FFFE}|bus\\bus.csproj|solutionrelative:bus\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC450EF-FE4B-4BF0-B6E5-64285104FFFE}|bus\\bus.csproj|c:\\users\\appuk\\source\\repos\\bus\\bus\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FC450EF-FE4B-4BF0-B6E5-64285104FFFE}|bus\\bus.csproj|solutionrelative:bus\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 278,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Weather.razor",
+              "DocumentMoniker": "C:\\Users\\appuk\\source\\repos\\bus\\bus\\Pages\\Weather.razor",
+              "RelativeDocumentMoniker": "bus\\Pages\\Weather.razor",
+              "ToolTip": "C:\\Users\\appuk\\source\\repos\\bus\\bus\\Pages\\Weather.razor",
+              "RelativeToolTip": "bus\\Pages\\Weather.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-09T12:14:53.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\appuk\\source\\repos\\bus\\bus\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "bus\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\appuk\\source\\repos\\bus\\bus\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "bus\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-09T12:15:36.273Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 122,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
